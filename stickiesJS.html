@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Stickies</title>
+</head>
+<style>
+
+  body {
+    background-color: rgb(238, 147, 238);
+  }
+
+
+   .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: rgb(238, 147, 238);
+    }
+
+  .flex-container > div {
+      border-radius: 25px;
+      background-color: rgb(241, 243, 105);
+      width: 150px;
+      height: 150px;
+      padding: 50px;
+      margin: 25px;
+      text-align: center;
+      line-height: 25px;
+      font-size: 20px;
+      padding: 50px;
+      font-family: Verdana, Geneva, sans-serif;
+      box-shadow: 10px 2px 5px black;
+  }
+
+</style>
+
+<body>
+
+       <button onclick="addNote('flex-container')">Add Note</button>
+
+<script>
+       function addNote(parentId)
+
+       {
+
+       // Adds an element to the document
+       var p = document.getElementById(parentId);
+       //creating new div for the nodes
+       var newDivElement = document.createElement("div");
+       newDivElement.setAttribute("class","crockett");
+       p.appendChild(newDivElement);
+       //creating editable text
+       var ptag =document.createElement("P");
+       ptag.setAttribute("contenteditable","true");
+       newDivElement.appendChild(ptag);
+
+   }
+
+</script>
+
+
+   <p class="sansserif">
+
+
+      <div class="flex-container" id="flex-container">
+           <div><p contenteditable="true">This is a paragraph. It is editable. Try to change this text.</p></div>
+
+         </div>
+
+       </p>
+
+</body>
+</html>
